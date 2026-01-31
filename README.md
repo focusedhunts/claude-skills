@@ -1,196 +1,108 @@
-# 🔍 Dart Detective
+# Claude Skills - Focused Hunts
 
-**Expert code review and troubleshooting for Flutter Android applications—Dart language focused**
+Quality Claude Code skills for real-world problems.
 
-Finds bugs that other tools miss. Both the visible crashes AND the silent logic errors that silently corrupt data or cause incorrect behavior without throwing exceptions.
+## Available Skills
 
----
+### 🔍 [Dart Detective](./DART_DETECTIVE.md)
 
-## What It Does
+Expert code review and troubleshooting for Flutter Android apps. Finds bugs that other tools miss—both the visible crashes and the silent logic errors that silently corrupt data or cause unexpected behavior.
 
-Dart Detective is a comprehensive code review skill that analyzes Flutter Android apps from the ground up:
+**What it does:**
+- Dart language-first review (the foundation of most issues)
+- Finds visible bugs (crashes, null safety errors) AND silent bugs (logic errors, routing issues, state inconsistencies)
+- Security audits for password managers and sensitive apps
+- Performance analysis with actionable optimizations
 
-1. **Dart Language Foundation** (the root of most issues)
-   - Null safety violations and improper nullable type handling
-   - Type system errors and unsafe casting
-   - Async/await anti-patterns and ignored futures
-   - Collection handling and immutability violations
-   - Performance issues and inefficient code patterns
-
-2. **Security Analysis**
-   - Credential storage and encryption validation
-   - API/network security and certificate handling
-   - Authentication and authorization patterns
-   - Sensitive data handling in memory
-   - Android Keystore integration
-   - Third-party library vetting
-
-3. **Bug Detection (Visible + Silent)**
-   - **Visible**: Null pointer exceptions, type errors, runtime crashes, resource leaks
-   - **Silent**: Logic errors, routing issues, state inconsistencies, ignored futures, missing error handling, data validation gaps
-
-4. **Performance & Architecture**
-   - Memory leaks and inefficient resource management
-   - List/scroll performance optimization
-   - State management patterns (Riverpod, Bloc)
-   - Navigation structure and dependency injection
-   - Over-engineering detection
-
-5. **Android Integration**
-   - Lifecycle management and resource cleanup
-   - Permission handling patterns
-   - Platform channel safety and communication
-   - Service management and background execution
-
----
-
-## Who Should Use This
-
-- **Password Managers & Security Apps** - Enhanced scrutiny for credential handling
-- **Performance-Critical Apps** - Battery optimization, responsiveness requirements
-- **Teams** - Systematic code quality and architectural validation
-- **Solo Developers** - Expert guidance for all code decisions
-- **Android Specialists** - Deep Flutter/Android integration expertise
-
----
-
-## How to Use
-
-### Proactive Code Review
-*"Please review my Flutter authentication module for security and best practices"*
-
-Submit code → Get comprehensive analysis across language, framework, platform, and security layers → Implement recommendations
-
-### Troubleshooting Specific Issues
-*"Users report the app crashes when opening certain saved passwords"*
-
-Describe the issue → Dart Detective identifies root cause → Provides corrected implementation
-
-### Security Audits
-*"Audit my password manager's credential storage and API communication"*
-
-Get focused security review with verification of encryption, secure storage, memory clearing, and API security
-
-### Performance Analysis
-*"The app is sluggish when scrolling through large lists"*
-
-Get optimization suggestions for list rendering, memory management, and efficient patterns
-
----
-
-## What Gets Reviewed
-
-✓ Null safety violations and nullable type handling
-✓ Type system errors and unsafe operations
-✓ Async/await anti-patterns and uncaught exceptions
-✓ Ignored futures and missing error handlers
-✓ Logic errors and unreachable code
-✓ Routing issues and security bypasses
-✓ State management correctness and memory leaks
-✓ Credential storage and encryption
-✓ API security and network handling
-✓ Permission patterns and Android security
-✓ Resource cleanup and lifecycle management
-✓ Over-engineering and custom workarounds
-✓ Performance inefficiencies and memory issues
+[View Dart Detective →](./DART_DETECTIVE.md)
 
 ---
 
 ## Installation
 
-1. **Add to Claude Code**
-   - Import the `dart-detective` skill from this repository
-   - Load the `SKILL.md` file into your Claude Code environment
+### Quick Start
 
-2. **Use immediately**
+1. **Clone or download this repository**
+   ```bash
+   git clone https://github.com/yourusername/claude-skills-focusedhunts.git
+   cd claude-skills-focusedhunts
+   ```
+
+2. **Install a skill into Claude Code**
+   - Open Claude Code
+   - Use the skill loader to add `dart-detective` from your local copy
+   - Or reference the SKILL.md file directly in your Claude Code environment
+
+3. **Start using the skill**
    - Submit Flutter code for review
-   - Ask focused questions about specific issues
+   - Ask for security audits, performance analysis, or bug hunting
    - Use automation scripts for diagnostics
 
-3. **Optional: Use automation scripts**
-   - `flutter_diagnostics` - Environment and SDK validation
-   - `analyze_logs.py` - Error pattern detection from logs
-   - `dependency_check` - Dependency vulnerability scanning
-   - `detect_silent_bugs.dart` - Static analysis for logic errors
+### For Each Skill
+
+Each skill directory is self-contained:
+```
+dart-detective/
+├── SKILL.md              # Core skill definition (load this into Claude Code)
+├── references/           # Reference materials (loaded as needed)
+└── scripts/              # Automation tools (optional helpers)
+```
 
 ---
 
-## Example Use Cases
+## How to Use
 
-### Security Audit: Password Manager
-*"Please perform a comprehensive security review of my Flutter password manager, focusing on credential storage, API communication, and memory handling."*
+### Reactive Troubleshooting
+*"I'm getting a null pointer exception in my authentication code"*
+→ Submit your code and the error. Dart Detective analyzes, identifies root cause, and provides fix.
 
-→ Receives detailed analysis of encryption, storage validation, API security, memory management, and Dart-level security issues
+### Proactive Code Review
+*"Please review my password manager's credential storage implementation"*
+→ Submit code. Get comprehensive security and best-practice review across Dart language, Flutter framework, and Android platform.
 
-### Performance Troubleshooting
-*"Users report lag when scrolling through 1000+ saved passwords. Can you identify the bottleneck?"*
+### Focused Reviews
+- **Security-only**: Password manager security patterns, credential handling, encryption
+- **Performance**: Memory optimization, list rendering, network efficiency
+- **Bug hunting**: Find logic errors, ignored futures, state inconsistencies
+- **Architecture**: State management patterns, dependency injection, scalability
 
-→ Receives list rendering analysis, const optimization suggestions, caching patterns, and Dart performance improvements
-
-### Architecture Validation
-*"I've implemented state management with Riverpod. Is my architecture scalable and following best practices?"*
-
-→ Receives review of provider patterns, immutability, lifecycle management, error handling, and Dart language usage
-
-### Android Integration Review
-*"Can you review my platform channel implementation and permissions handling?"*
-
-→ Receives platform channel safety analysis, error handling verification, permissions flow review, and Dart async integration
-
----
-
-## Key Features
-
-- **Layered Approach**: Review from Dart language foundation → Flutter framework → Android platform
-- **Silent Bug Detection**: Finds logic errors and state issues that don't throw exceptions
-- **Security-First**: Prioritizes security vulnerabilities in all reviews
-- **Actionable Results**: Each finding includes ready-to-implement solutions, not just problems
-- **Automation Included**: Scripts for diagnostics, log analysis, and dependency checking
-- **Modular**: Load only the reference materials relevant to your review focus
-- **Password Manager Expertise**: Enhanced scrutiny for credential storage and sensitive apps
+### Automation
+Use included scripts for deterministic diagnostics:
+- `flutter_diagnostics` - Environment and SDK validation
+- `analyze_logs.py` - Error pattern detection from Flutter logs
+- `dependency_check` - Dependency analysis and vulnerability scanning
+- `detect_silent_bugs.dart` - Static analysis for logic errors
 
 ---
 
-## Review Output
+## License
 
-Each code review provides:
+Copyright (c) 2026 Focused Hunts
 
-1. **Executive Summary** - Overall health, critical findings, recommended actions
-2. **Detailed Findings** - Issues organized by severity, with impact analysis
-3. **Code Examples** - Incorrect vs. corrected implementations
-4. **Action Items** - Prioritized list with effort estimates
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
----
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## Technology Support
-
-- **Flutter Versions:** 3.0+
-- **Dart Versions:** 3.0+
-- **Android API Level:** 21+ (Android 5.0+)
-- **State Management:** Riverpod 2.0+, Bloc 8.0+
-- **Navigation:** GoRouter, Navigator
-
----
-
-## Philosophy
-
-- **Quality Over Quantity** - One exceptional skill beats many mediocre ones
-- **Real-World Tested** - Solutions from actual production apps, not theory
-- **Security First** - Security vulnerabilities take priority in all reviews
-- **Proven Solutions** - Recommends established patterns, flags custom workarounds
-- **Simplicity** - Avoids over-engineering, prefers straightforward implementations
-- **Helpful Tone** - Professional but approachable, we explain the "why"
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ---
 
-## Getting Started
+## Support & Questions
 
-1. Load the skill into Claude Code
-2. Submit Flutter code with context about your app
-3. Specify the review focus (security, performance, bug hunting, architecture, etc.)
-4. Receive comprehensive analysis with explanations and solutions
-5. Implement recommendations or iterate with follow-up questions
+- **Issues with a skill?** Open an issue in this repository
+- **Feature requests?** We listen, but quality matters more than quantity
+- **Questions about installation?** Check the individual skill README
 
 ---
-
-**Finds the bugs in your Dart code that other tools miss.**
